@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipey Paywall | Оплата</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="paywall-container">
+        <header class="header">
+            <div class="header-top">
+                <div class="timer-container">
+                    <span class="timer-text">скидка истекает через:</span>
+                    <span class="timer-value">⏱ <span id="timer">48:00:00</span></span>
+                </div>
+                <div class="lang-switcher">
+                    <div class="lang-dropdown">
+                        <button class="lang-btn main-flag" data-lang="en" title="English">
+                            <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/us.svg" alt="English" width="24" height="16">
+                        </button>
+                        <div class="lang-menu">
+                            <button class="lang-btn" data-lang="de" title="Deutsch">
+                                <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/de.svg" alt="Deutsch" width="24" height="16">
+                            </button>
+                            <button class="lang-btn" data-lang="jp" title="日本語">
+                                <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/jp.svg" alt="Japan" width="24" height="16">
+                            </button>
+                            <button class="lang-btn" data-lang="es" title="Español">
+                                <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/es.svg" alt="Spain" width="24" height="16">
+                            </button>
+                            <button class="lang-btn" data-lang="fr" title="Français">
+                                <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/fr.svg" alt="France" width="24" height="16">
+                            </button>
+                            <button class="lang-btn" data-lang="ru" title="Русский">
+                                <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/ru.svg" alt="Russia" width="24" height="16">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Выберите свой план</h1>
+            <p>Начните бесплатно или перейдите на Pro для доступа к лучшим AI-моделям</p>
+        </header>
+
+        <div class="pricing-toggle">
+            <span>Ежемесячно</span>
+            <label class="switch">
+                <input type="checkbox" id="price-toggle" checked>
+                <span class="slider"></span>
+            </label>
+            <span>Ежегодно <span class="discount">-20%</span></span>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="card">
+                <h3>Starter</h3>
+                <div class="price">$<span class="amount" data-monthly="0" data-yearly="0">0</span><span>/мес</span></div>
+                <ul class="features">
+                    <li>50 кредитов в месяц</li>
+                    <li>Доступ к базовым моделям</li>
+                    <li>1 активный проект</li>
+                </ul>
+                <a href="#" class="btn btn-outline" data-auth-trigger="Starter">Начать</a>
+            </div>
+
+            <div class="card featured">
+                <h3>Professional</h3>
+                <div class="price">$<span class="amount" data-monthly="20" data-yearly="16">16</span><span>/мес</span></div>
+                <ul class="features">
+                    <li>Безлимитные кредиты</li>
+                    <li>Доступ к GPT-4o и Claude 3.5</li>
+                    <li>Приоритетная поддержка</li>
+                    <li>API для разработчиков</li>
+                </ul>
+                <a href="#" class="btn btn-primary" data-auth-trigger="Professional">Попробовать Pro</a>
+            </div>
+
+            <div class="card">
+                <h3>Business</h3>
+                <div class="price">$<span class="amount" data-monthly="50" data-yearly="40">40</span><span>/мес</span></div>
+                <ul class="features">
+                    <li>Всё из плана Pro</li>
+                    <li>Командная работа</li>
+                    <li>SLA и безопасность</li>
+                    <li>Персональный менеджер</li>
+                </ul>
+                <a href="#" class="btn btn-outline" data-auth-trigger="Business">Связаться</a>
+            </div>
+        </div>
+
+    <!-- Блок преимуществ Premium -->
+    <div class="premium-benefits">
+        <h2>Что вы получаете в Премиум:</h2>
+        <ul class="premium-list">
+            <li>
+                <span class="icon">
+                    <!-- Иконка звонка -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.12.45 2.33.68 3.48.68a1 1 0 011 1v3.5a1 1 0 01-1 1C7.61 22 2 16.39 2 10a1 1 0 011-1h3.5a1 1 0 011 1c0 1.15.23 2.36.68 3.48a1 1 0 01-.21 1.11l-2.2 2.2z" stroke="#8b5cf6" stroke-width="2"/></svg>
+                </span>
+                Звонок
+            </li>
+            <li>
+                <span class="icon">
+                    <!-- Иконка токенов -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="#8b5cf6" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#8b5cf6" stroke-width="2"/></svg>
+                </span>
+                Токены
+            </li>
+            <li>
+                <span class="icon">
+                    <!-- Иконка сообщений -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#8b5cf6" stroke-width="2"/><path d="M3 7l9 6 9-6" stroke="#8b5cf6" stroke-width="2"/></svg>
+                </span>
+                Безлимитные сообщения
+            </li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="margin-top: 24px; display: block; width: 100%; max-width: 320px; margin-left: auto; margin-right: auto;">Разблокировать функцию</a>
+    </div>
+
+    <!-- Слайдер отзывов (Swiper) -->
+    <div class="reviews-swiper">
+        <h2>Отзывы о продукте</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <blockquote>Очень удобный сервис! Экономит время и помогает быстро решать задачи.</blockquote>
+                    <div class="review-author">— Анна, разработчик</div>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote>Премиум-функции действительно стоят своих денег. Рекомендую всем коллегам!</blockquote>
+                    <div class="review-author">— Дмитрий, менеджер проектов</div>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote>Отличная поддержка и быстрый доступ к лучшим AI-моделям.</blockquote>
+                    <div class="review-author">— Елена, предприниматель</div>
+                </div>
+            </div>
+            <!-- Навигация -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    </div>
+    <!-- Часто задаваемые вопросы -->
+    <div class="faq-section">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">Как я могу начать использовать платформу?</button>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Вы можете зарегистрироваться бесплатно и сразу начать использовать базовые функции без каких-либо ограничений.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Какой способ оплаты вы принимаете?</button>
+                <div class="faq-answer">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Мы принимаем все основные кредитные карты, включая Visa, MasterCard, а также альтернативные способы оплаты через Apple Pay и Google Pay. Платежи обрабатываются безопасно через закодированные каналы.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Можно ли отменить подписку в любой момент?</button>
+                <div class="faq-answer">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Да, вы можете отменить подписку в любой момент через настройки аккаунта. После отмены вы сохраняете доступ до конца текущего периода оплаты.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Как часто вы обновляете функции?</button>
+                <div class="faq-answer">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Мы постоянно развиваем платформу и добавляем новые функции. Обновления выпускаются еженедельно, а крупные улучшения обычно выходят ежемесячно.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Какая поддержка доступна для пользователей?</button>
+                <div class="faq-answer">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Мы предоставляем 24/7 поддержку через чат, email и тикет-систему. Пользователи Pro плана получают приоритетную поддержку с гарантированным ответом в течение 2 часов.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Финальный CTA блок -->
+    <div class="final-cta">
+        <h2>Готовы начать?</h2>
+        <p>Присоединитесь к нашей растущей комьюнити и получите доступ ко всем преимуществам прямо сейчас</p>
+        <a href="#" class="btn btn-finish">Начать чат сейчас</a>
+    </div>
+    </div>
+    <!-- Модальное окно авторизации -->
+    <div id="auth-modal" class="auth-modal-overlay hidden">
+        <div class="auth-modal">
+            <button class="auth-modal-close" id="auth-modal-close">&times;</button>
+            
+            <div class="auth-modal-header">
+                <h2 class="auth-modal-title">Вход в аккаунт</h2>
+                <p class="auth-modal-subtitle">Войдите для продолжения</p>
+            </div>
+
+            <!-- Вкладки: Вход / Регистрация -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Вход</button>
+                <button class="auth-tab" data-tab="register">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <input type="email" id="login-email" class="auth-input" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" class="auth-input" placeholder="Пароль" required>
+                </div>
+                <div class="form-help">
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn btn-primary auth-submit">Войти</button>
+            </form>
+
+            <!-- Форма регистрации -->
+            <form id="register-form" class="auth-form hidden">
+                <div class="form-group">
+                    <input type="email" id="register-email" class="auth-input" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-password" class="auth-input" placeholder="Пароль" minlength="8" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-confirm" class="auth-input" placeholder="Подтвердите пароль" minlength="8" required>
+                </div>
+                <button type="submit" class="btn btn-primary auth-submit">Зарегистрироваться</button>
+            </form>
+
+            <div class="auth-divider">
+                <span>или</span>
+            </div>
+
+            <!-- Социальные кнопки -->
+            <div class="auth-social">
+                <button type="button" class="btn-social btn-google" id="google-login">
+                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    <span>Войти через Google</span>
+                </button>
+                <button type="button" class="btn-social btn-discord" id="discord-login">
+                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="#5865F2" d="M20.32 4.37A19.8 19.8 0 0 0 15.4 3c-.21.38-.46.9-.63 1.31a18.28 18.28 0 0 0-5.54 0A13.24 13.24 0 0 0 8.6 3a19.74 19.74 0 0 0-4.94 1.38C.53 9.12-.31 13.73.11 18.29a19.94 19.94 0 0 0 6.07 3.08c.49-.68.93-1.41 1.31-2.18-.72-.27-1.4-.61-2.05-1 .17-.13.33-.27.49-.41 3.95 1.84 8.24 1.84 12.14 0 .16.14.32.28.49.41-.65.39-1.34.73-2.06 1 .38.77.83 1.5 1.32 2.18a19.85 19.85 0 0 0 6.08-3.08c.5-5.31-.85-9.88-3.68-13.92zM8.03 15.53c-1.18 0-2.15-1.08-2.15-2.4 0-1.33.95-2.4 2.15-2.4 1.2 0 2.17 1.08 2.15 2.4 0 1.33-.95 2.4-2.15 2.4zm7.94 0c-1.19 0-2.16-1.08-2.15-2.4 0-1.33.95-2.4 2.15-2.4 1.2 0 2.17 1.08 2.15 2.4 0 1.33-.95 2.4-2.15 2.4z"/>
+                    </svg>
+                    <span>Войти через Discord</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
